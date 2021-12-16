@@ -1,76 +1,117 @@
-# VBA Homework: The VBA of Wall Street
+# Python Homework - Py Me Up, Charlie
 
 ## Background
 
-You are well on your way to becoming a programmer and Excel master! In this homework assignment, you will use VBA scripting to analyze real stock market data. Depending on your comfort level with VBA, you may choose to challenge yourself with a few of the challenge tasks.
+Well... you've made it!
+
+It's time to put away the Excel sheet and join the big leagues. Welcome to the world of programming with Python. In this homework assignment, you'll be using the concepts you've learned to complete the **two** Python Challenges, PyBank and PyPoll.
+
+Both of these challenges encompass a real-world situation where your newfound Python scripting skills can come in handy. These challenges are far from easy so expect some hard work ahead!
 
 ### Before You Begin
 
-1. Create a new repository for this project called `VBA-challenge`. **Do not add this homework to an existing repository**.
+* Create a new repository for this project called `python-challenge`. **Do not add this homework to an existing repository**.
 
-2. Inside the new repository that you just created, add any VBA files you use for this assignment. These will be the main scripts to run for each analysis.
+* Clone the new repository to your computer.
 
-### Files
+* Inside your local git repository, create a directory for each Python Challenge. Use folder names corresponding to the challenges: **PyBank** and  **PyPoll**.
 
-* [Test Data](Resources/alphabetical_testing.xlsx) - Use this while developing your scripts.
+* Inside of each folder that you just created, add the following:
 
-* [Stock Data](Resources/Multiple_year_stock_data.xlsx) - Run your scripts on this data to generate the final homework report.
+  * A new file called `main.py`. This will be the main script to run for each analysis.
+  * A "Resources" folder that contains the CSV files you used. Make sure your script has the correct path to the CSV file.
+  * An "analysis" folder that contains your text file that has the results from your analysis.
 
-### Stock Market Analyst
+* Push the above changes to GitHub or GitLab.
 
-![stock Market](Images/stockmarket.jpg)
+## PyBank
 
-## Instructions
+![Revenue](Images/revenue-per-lead.png)
 
-* Create a script that will loop through all the stocks for one year and output the following information:
+* In this challenge, you are tasked with creating a Python script for analyzing the financial records of your company. You will give a set of financial data called [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`. (Thankfully, your company has rather lax standards for accounting so the records are simple.)
 
-  * The ticker symbol.
+* Your task is to create a Python script that analyzes the records to calculate each of the following:
 
-  * Yearly change from opening price at the beginning of a given year to the closing price at the end of that year.
+  * The total number of months included in the dataset
 
-  * The percent change from opening price at the beginning of a given year to the closing price at the end of that year.
+  * The net total amount of "Profit/Losses" over the entire period
 
-  * The total stock volume of the stock.
+  * Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
 
-* You should also have conditional formatting that will highlight positive change in green and negative change in red.
+  * The greatest increase in profits (date and amount) over the entire period
 
-* The result should look as follows:
+  * The greatest decrease in profits (date and amount) over the entire period
 
-![moderate_solution](Images/moderate_solution.png)
+* As an example, your analysis should look similar to the one below:
 
-## BONUS
+  ```text
+  Financial Analysis
+  ----------------------------
+  Total Months: 86
+  Total: $38382578
+  Average  Change: $-2315.12
+  Greatest Increase in Profits: Feb-2012 ($1926159)
+  Greatest Decrease in Profits: Sep-2013 ($-2196167)
+  ```
 
-* Your solution will also be able to return the stock with the "Greatest % increase", "Greatest % decrease" and "Greatest total volume". The solution will look as follows:
+* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
-![hard_solution](Images/hard_solution.png)
+## PyPoll
 
-* Make the appropriate adjustments to your VBA script that will allow it to run on every worksheet, i.e., every year, just by running the VBA script once.
+![Vote Counting](Images/Vote_counting.png)
 
-## Other Considerations
+* In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
 
-* Use the sheet `alphabetical_testing.xlsx` while developing your code. This data set is smaller and will allow you to test faster. Your code should run on this file in less than 3-5 minutes.
+* You will be give a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. Your task is to create a Python script that analyzes the votes and calculates each of the following:
 
-* Make sure that the script acts the same on every sheet. The joy of VBA is that it takes the tediousness out of repetitive tasks with a click of the button.
+  * The total number of votes cast
 
-* Some assignments, like this one, contain a bonus. It is possible to achieve mastery on this assignment without completing the bonus. The bonus adds an opportunity to further develop you skills and be rewarded extra points for doing so.
+  * A complete list of candidates who received votes
 
-## Submission
+  * The percentage of votes each candidate won
 
-* To submit please upload the following to GitHub:
+  * The total number of votes each candidate won
 
-  * A screen shot for each year of your results on the Multi Year Stock Data.
+  * The winner of the election based on popular vote.
 
-  * VBA scripts as separate files.
+* As an example, your analysis should look similar to the one below:
 
-* Ensure you commit regularly to your repository and it contains a README.md file.
+  ```text
+  Election Results
+  -------------------------
+  Total Votes: 3521001
+  -------------------------
+  Khan: 63.000% (2218231)
+  Correy: 20.000% (704200)
+  Li: 14.000% (492940)
+  O'Tooley: 3.000% (105630)
+  -------------------------
+  Winner: Khan
+  -------------------------
+  ```
 
-* Upload all of your files to your GitHub repository which should also contain a README.md file.
+* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
-* After everything has been saved, create a shareable link and submit that to <https://bootcampspot-v2.com/>.
+## Hints and Considerations
+
+* Consider what we've learned so far. To date, we've learned how to import modules like `csv`; to read and write files in various formats; to store contents in variables, lists, and dictionaries; to iterate through basic data structures; and to debug along the way. Using what we've learned, try to break down your tasks into discrete mini-objectives. This will be a _much_ better course of action than spending all your time looking for a solution on Stack Overflow.
+
+* As you will discover, for some of these challenges, the datasets are quite large. This was done purposefully, as it showcases one of the limits of Excel-based analysis. While our first instinct, as data analysts, is often to head straight into Excel, creating scripts in Python can provide us with more robust options for handling "big data".
+
+* Write one script for each dataset provided. Run your script separately to make sure that the code works for its respective dataset.
+
+* Feel encouraged to work in groups, but don't shortchange yourself by copying someone else's work. You get what you put in, and the art of programming is extremely unforgiving to moochers. Dig your heels in, burn the night oil, and learn this while you can! These are skills that will pay dividends in your future career.
+
+* Start early, and reach out for help often! Challenge yourself to identify _specific_ questions for your instructors and TAs. Don't resign yourself to simply saying, "I'm totally lost." If you need help, reach out because we're happy to help. But, come prepared and show us what you have done and your thought process.
+
+* Always commit your work and back it up with GitHub/GitLab pushes. You don't want to lose hours of your work because you didn't push it to GitHub/GitLab every half hour or so.
+
+  * Ensure your repository has regular commits and a thorough README.md file
+
 
 ## Rubric
 
-[Unit 2 Rubric - VBA Homework - The VBA of Wall Street](https://docs.google.com/document/d/1OjDM3nyioVQ6nJkqeYlUK7SxQ3WZQvvV3T9MHCbnoWk/edit?usp=sharing)
+[Unit 3 Rubric - Python Homework - Py Me Up, Charlie](https://docs.google.com/document/d/1Q5ZnMUD12NvbElOgE3a_lcahuRZdv83aDu9VtXZRiGg/edit?usp=sharing)
 
 - - -
 
