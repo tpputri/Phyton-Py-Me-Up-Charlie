@@ -1,69 +1,77 @@
-# Python Homework - Py Me Up, Charlie
+# VBA Homework: The VBA of Wall Street
 
-## PyBank
+## Background
 
-* In this challenge, you are tasked with creating a Python script for analyzing the financial records of your company. You will give a set of financial data called [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`. (Thankfully, your company has rather lax standards for accounting so the records are simple.)
+You are well on your way to becoming a programmer and Excel master! In this homework assignment, you will use VBA scripting to analyze real stock market data. Depending on your comfort level with VBA, you may choose to challenge yourself with a few of the challenge tasks.
 
-* Your task is to create a Python script that analyzes the records to calculate each of the following:
+### Before You Begin
 
-  * The total number of months included in the dataset
+1. Create a new repository for this project called `VBA-challenge`. **Do not add this homework to an existing repository**.
 
-  * The net total amount of "Profit/Losses" over the entire period
+2. Inside the new repository that you just created, add any VBA files you use for this assignment. These will be the main scripts to run for each analysis.
 
-  * The average of the changes in "Profit/Losses" over the entire period
+### Files
 
-  * The greatest increase in profits (date and amount) over the entire period
+* [Test Data](Resources/alphabetical_testing.xlsx) - Use this while developing your scripts.
 
-  * The greatest decrease in losses (date and amount) over the entire period
+* [Stock Data](Resources/Multiple_year_stock_data.xlsx) - Run your scripts on this data to generate the final homework report.
 
-* As an example, your analysis should look similar to the one below:
+### Stock Market Analyst
 
-  ```text
-  Financial Analysis
-  ----------------------------
-  Total Months: 86
-  Total: $38382578
-  Average  Change: $-2315.12
-  Greatest Increase in Profits: Feb-2012 ($1926159)
-  Greatest Decrease in Profits: Sep-2013 ($-2196167)
-  ```
+![stock Market](Images/stockmarket.jpg)
 
-* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+## Instructions
 
-## PyPoll
+* Create a script that will loop through all the stocks for one year and output the following information:
 
-* In this challenge, you are tasked with helping a small, rural town modernize its vote-counting process. (Up until now, Uncle Cleetus had been trustfully tallying them one-by-one, but unfortunately, his concentration isn't what it used to be.)
+  * The ticker symbol.
 
-* You will be give a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. Your task is to create a Python script that analyzes the votes and calculates each of the following:
+  * Yearly change from opening price at the beginning of a given year to the closing price at the end of that year.
 
-  * The total number of votes cast
+  * The percent change from opening price at the beginning of a given year to the closing price at the end of that year.
 
-  * A complete list of candidates who received votes
+  * The total stock volume of the stock.
 
-  * The percentage of votes each candidate won
+* You should also have conditional formatting that will highlight positive change in green and negative change in red.
 
-  * The total number of votes each candidate won
+* The result should look as follows:
 
-  * The winner of the election based on popular vote.
+![moderate_solution](Images/moderate_solution.png)
 
-* As an example, your analysis should look similar to the one below:
+## BONUS
 
-  ```text
-  Election Results
-  -------------------------
-  Total Votes: 3521001
-  -------------------------
-  Khan: 63.000% (2218231)
-  Correy: 20.000% (704200)
-  Li: 14.000% (492940)
-  O'Tooley: 3.000% (105630)
-  -------------------------
-  Winner: Khan
-  -------------------------
-  ```
+* Your solution will also be able to return the stock with the "Greatest % increase", "Greatest % decrease" and "Greatest total volume". The solution will look as follows:
 
-* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+![hard_solution](Images/hard_solution.png)
 
-## Copyright
+* Make the appropriate adjustments to your VBA script that will allow it to run on every worksheet, i.e., every year, just by running the VBA script once.
 
-Trilogy Education Services © 2019. All Rights Reserved.
+## Other Considerations
+
+* Use the sheet `alphabetical_testing.xlsx` while developing your code. This data set is smaller and will allow you to test faster. Your code should run on this file in less than 3-5 minutes.
+
+* Make sure that the script acts the same on every sheet. The joy of VBA is that it takes the tediousness out of repetitive tasks with a click of the button.
+
+* Some assignments, like this one, contain a bonus. It is possible to achieve mastery on this assignment without completing the bonus. The bonus adds an opportunity to further develop you skills and be rewarded extra points for doing so.
+
+## Submission
+
+* To submit please upload the following to GitHub:
+
+  * A screen shot for each year of your results on the Multi Year Stock Data.
+
+  * VBA scripts as separate files.
+
+* Ensure you commit regularly to your repository and it contains a README.md file.
+
+* Upload all of your files to your GitHub repository which should also contain a README.md file.
+
+* After everything has been saved, create a shareable link and submit that to <https://bootcampspot-v2.com/>.
+
+## Rubric
+
+[Unit 2 Rubric - VBA Homework - The VBA of Wall Street](https://docs.google.com/document/d/1OjDM3nyioVQ6nJkqeYlUK7SxQ3WZQvvV3T9MHCbnoWk/edit?usp=sharing)
+
+- - -
+
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
